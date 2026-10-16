@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinereplicas × Sesame — Espace Affiliés</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1222;
+    --ink-soft:#4A5068;
+    --gold:#C9A227;
+    --gold-soft:#F3E9CC;
+    --bg:#FFFFFF;
+    --bg-alt:#F7F6F2;
+    --border:#E6E4DC;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Manrope',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+
+  /* ---------- TOPBAR ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(90deg,#141C6E 0%,#1B2286 55%,#2B34A8 100%);
+    border-bottom:3px solid var(--gold);
+  }
+  .topbar-in{
+    max-width:1080px;margin:0 auto;padding:13px 26px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .brand{
+    font-size:12.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;
+    color:#fff;text-decoration:none;white-space:nowrap;
+  }
+  .brand .x{color:var(--gold);margin:0 6px;font-weight:700;}
+  .topnav{display:flex;gap:26px;}
+  .topnav a{
+    font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+    color:rgba(255,255,255,.85);
+    text-decoration:none;padding:5px 0;border-bottom:2px solid transparent;
+    transition:.18s;
+  }
+  .topnav a:hover{color:#fff;border-bottom-color:var(--gold);}
+
+  /* ---------- HERO ---------- */
+  .hero{width:100%;background:#0E1222;line-height:0;}
+  .hero-img{width:100%;height:auto;display:block;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:58px 0 10px;}
+  section:first-of-type{padding-top:48px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
+  .eyebrow-num{font-size:26px;font-weight:800;color:var(--gold);line-height:1;}
+  .eyebrow-txt{
+    font-size:15px;font-weight:800;letter-spacing:2.6px;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .sec-sub{font-size:15px;color:var(--ink-soft);margin:2px 0 26px;line-height:1.6;max-width:640px;}
+
+  .sec-arrow{text-align:center;margin:38px 0 4px;}
+  .sec-arrow span{
+    display:inline-block;color:var(--gold);font-size:26px;line-height:1;
+    animation:bob 1.6s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateY(0);opacity:.5;}50%{transform:translateY(7px);opacity:1;}}
+
+  /* ---------- PRODUITS ---------- */
+  .prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;}
+  .prod{
+    border:1px solid var(--border);border-radius:14px;overflow:hidden;
+    background:var(--bg-alt);display:flex;flex-direction:column;
+  }
+  .prod-img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;display:block;padding:14px;border-bottom:1px solid var(--border);}
+  .prod-body{padding:18px 20px 22px;}
+  .prod-tag{
+    display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.6px;
+    text-transform:uppercase;color:#6B5A12;background:var(--gold-soft);
+    padding:4px 9px;border-radius:999px;margin-bottom:10px;
+  }
+  .prod-name{font-size:17px;font-weight:800;line-height:1.3;margin:0 0 8px;}
+  .prod-desc{font-size:13.5px;line-height:1.65;color:var(--ink-soft);margin:0 0 12px;}
+  .prod-specs{list-style:none;padding:0;margin:0;}
+  .prod-specs li{
+    font-size:13px;line-height:1.6;color:var(--ink-soft);
+    padding-left:16px;position:relative;
+  }
+  .prod-specs li::before{content:"·";position:absolute;left:4px;color:var(--gold);font-weight:800;}
+  .prod-why{
+    font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;
+    color:var(--ink);margin:0 0 9px;
+  }
+  .prod-targets{font-size:12.5px;line-height:1.6;color:var(--ink-soft);margin:0 0 12px;}
+  .prod-targets b{color:var(--ink);font-weight:800;}
+  .prod-hook{
+    font-size:14px;font-weight:700;line-height:1.5;color:var(--ink);
+    margin:0;padding:12px 14px;background:var(--gold-soft);
+    border-left:3px solid var(--gold);border-radius:0 8px 8px 0;
+  }
+
+  /* ---------- VIDEOS ---------- */
+  .vid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:26px;}
+  .vid{display:flex;flex-direction:column;}
+  .vid video{
+    width:100%;aspect-ratio:9/16;object-fit:cover;
+    border-radius:13px;background:#000;display:block;
+    border:1px solid var(--border);
+  }
+  .vid-meta{padding:11px 2px 0;}
+  .vid-tag{
+    display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:1.5px;
+    text-transform:uppercase;color:#6B5A12;background:var(--gold-soft);
+    padding:3px 8px;border-radius:999px;margin-bottom:7px;
+  }
+  .vid-title{font-size:14px;font-weight:800;line-height:1.35;margin:0 0 5px;}
+  .vid-why{font-size:12.5px;line-height:1.6;color:var(--ink-soft);margin:0;}
+  .vid-why b{color:var(--ink);font-weight:700;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:70px;border-top:1px solid var(--border);
+    padding:26px 0 44px;font-size:12.5px;color:var(--ink-soft);text-align:center;
+  }
+
+  @media(max-width:620px){
+    .topnav{gap:16px;}
+    .topnav a{font-size:12.5px;}
+    .eyebrow-num{font-size:22px;}
+    .eyebrow-txt{font-size:13px;letter-spacing:2px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">Cinereplicas<span class="x">×</span>Sesame</a>
+    <nav class="topnav">
+      <a href="#produits">Les produits</a>
+      <a href="#videos">Vidéos d'inspiration</a>
+    </nav>
+  </div>
+</div>
+
+<div id="top">
+  <div class="hero">
+    <img class="hero-img" src="hero-avent.jpg" alt="Calendriers de l'Avent Cinereplicas 2026">
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 01 PRODUITS ===== -->
+  <section id="produits">
+    <div class="sec-head">
+      <span class="eyebrow-num">01</span>
+      <span class="eyebrow-txt">Les produits</span>
+    </div>
+    <p class="sec-sub">Pour chaque calendrier : l'angle à exploiter maintenant, à qui il parle, et une accroche prête à l'emploi.</p>
+
+    <div class="prod-grid">
+
+      <article class="prod">
+        <img class="prod-img" src="prod-harry-potter.jpg" alt="Calendrier de l'Avent Harry Potter Hogwarts">
+        <div class="prod-body">
+          <span class="prod-tag">Harry Potter</span>
+          <h3 class="prod-name">Hogwarts</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>La nouvelle série HBO sort le 25 décembre : le calendrier devient le compte à rebours jusqu'au premier épisode</li>
+            <li>La saga fête ses 25 ans</li>
+            <li>L'univers est partout cet automne — Picard × Harry Potter, Legami en décembre</li>
+            <li>Cadeau facile, parfait pour les sélections « idées cadeaux »</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="prod">
+        <img class="prod-img" src="prod-maillot-bleus.jpg" alt="Calendrier de l'Avent Maillot des Bleus 2026">
+        <div class="prod-body">
+          <span class="prod-tag">Équipe de France</span>
+          <h3 class="prod-name">Maillot des Bleus 2026</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>Un maillot historique : celui du Mondial 2026 où Mbappé est devenu le meilleur buteur de l'histoire de la Coupe du monde (22 buts)</li>
+            <li>Une nouvelle ère : Deschamps est parti après 14 ans, Zidane est le nouveau sélectionneur</li>
+            <li>Deux matchs juste avant décembre : Italie-France le 12 novembre, France-Turquie le 15 novembre</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="prod">
+        <img class="prod-img" src="prod-brawl-stars.jpg" alt="Calendrier de l'Avent Brawl Stars Mega Box 2026">
+        <div class="prod-body">
+          <span class="prod-tag">Brawl Stars</span>
+          <h3 class="prod-name">Mega Box 2026</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>Le jeu est en pleine actualité : l'événement Brawl-O-Ween dure jusqu'à début novembre, avec un nouveau brawler, Vince</li>
+            <li>Un public jeune et très large — le cadeau évident pour les 8-14 ans, que les parents cherchent en ligne</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="prod">
+        <img class="prod-img" src="prod-one-piece.jpg" alt="Calendrier de l'Avent One Piece Chopper 2026">
+        <div class="prod-body">
+          <span class="prod-tag">One Piece</span>
+          <h3 class="prod-name">Chapeau de Chopper</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>Chopper est très présent : arrivé dans la saison 2 de la série live-action Netflix, la saison 3 <i>The Battle of Alabasta</i> est attendue en 2027</li>
+            <li>Un format qui se démarque : la forme du chapeau en fait un objet de collection très « instagrammable »</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="prod">
+        <img class="prod-img" src="prod-kpop.jpg" alt="Calendrier de l'Avent KPop Demon Hunters 2026">
+        <div class="prod-body">
+          <span class="prod-tag">KPop Demon Hunters</span>
+          <h3 class="prod-name">Huntrix</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>La licence Netflix la plus demandée de l'année — c'est elle qui ramène le plus de vues sur les vidéos</li>
+            <li>Un public qui commente et partage : les fans se reconnaissent entre eux dès la première seconde</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="prod">
+        <img class="prod-img" src="prod-kpop-scene.jpg" alt="Calendrier de l'Avent Scène KPop Demon Hunters 2026">
+        <div class="prod-body">
+          <span class="prod-tag">KPop Demon Hunters</span>
+          <h3 class="prod-name">Scène</h3>
+          <p class="prod-why">Pourquoi maintenant</p>
+          <ul class="prod-specs">
+            <li>Le format se démarque en vidéo : la transformation en scène est le hook, elle se montre en une seconde</li>
+            <li>C'est la version « collection » de la licence — à présenter juste après le calendrier classique</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="sec-arrow"><span>↓</span></div>
+
+  <!-- ===== 02 VIDÉOS ===== -->
+  <section id="videos">
+    <div class="sec-head">
+      <span class="eyebrow-num">02</span>
+      <span class="eyebrow-txt">Vidéos d'inspiration</span>
+    </div>
+    <p class="sec-sub">Des vidéos qui fonctionnent sur le TikTok Shop, avec ce qui les fait marcher. À adapter — pas à copier.</p>
+
+    <div class="vid-grid">
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="hp-moldus.jpg" src="hp-moldus.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">Harry Potter</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="hp-les-autres.jpg" src="hp-les-autres.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">Harry Potter</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="kpop-mombear.jpg" src="kpop-mombear.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">KPop Demon Hunters</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="kpop-mariform.jpg" src="kpop-mariform.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">KPop Demon Hunters</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="kpop-ambrine.jpg" src="kpop-ambrine.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">KPop Demon Hunters</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="onepiece-chopper.jpg" src="onepiece-chopper.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">One Piece</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="brawlstars.jpg" src="brawlstars.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">Brawl Stars</span>
+        </div>
+      </div>
+
+      <div class="vid">
+        <video controls playsinline preload="none" poster="equipe-de-france.jpg" src="equipe-de-france.mp4"></video>
+        <div class="vid-meta">
+          <span class="vid-tag">Équipe de France</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Cinereplicas × Sesame — espace affiliés · Contenus mis à jour chaque semaine
+</footer>
+
+</body>
+</html>
